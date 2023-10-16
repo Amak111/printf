@@ -65,4 +65,7 @@ int _putchar(char c);
 /* _printf.c module */
 int _printf(const char *format, ...);
 
+/* print_string.c */
+void print_char(va_list args);
+void print_String(va_list args);
 #endif
