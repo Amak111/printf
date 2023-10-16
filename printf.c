@@ -12,7 +12,7 @@ int _printf(const char * const format, ...)
 {
 	va_list list;
 
-	f_dt print_op[] = {
+	specifier_t print_op[] = {
 		{ "c", print_char },
 		{ "s", print_String },
 		{ "d", print_decimal },
