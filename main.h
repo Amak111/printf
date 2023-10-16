@@ -66,6 +66,7 @@ int _putchar(char c);
 int _printf(const char *format, ...);
 
 /* print_string.c */
+int _strlen(char *s);
 void print_char(va_list args);
 void print_String(va_list args);
 #endif
