@@ -83,4 +83,10 @@ int unsigned_print(va_list arg);
 /* oc_print.c module */
 int oc_print(va_list val);
 
+/* hex_print.c module */
+int hex_print(va_list val);
+
+/* HEX_print.c module */
+int HEX_print(va_list val);
+
 #endif
