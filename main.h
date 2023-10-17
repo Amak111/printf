@@ -80,4 +80,7 @@ int bin_print(va_list val);
 /* unsigned_print.c module */
 int unsigned_print(va_list arg);
 
+/* oc_print.c module */
+int oc_print(va_list val);
+
 #endif
