@@ -77,4 +77,7 @@ int deci_print(va_list arg);
 /* bin_print.c module */
 int bin_print(va_list val);
 
+/* unsigned_print.c module */
+int unsigned_print(va_list arg);
+
 #endif

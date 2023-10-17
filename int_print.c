@@ -10,7 +10,7 @@ int int_print(va_list arg)
 {
 	int x = va_arg(arg, int);
 	int num, dig;
-	int last = n % 10, i = 1, exe = 1;
+	int last = x % 10, i = 1, exe = 1;
 
 	x = x / 10;
 	num = x;
@@ -57,7 +57,7 @@ int deci_print(va_list arg)
 {
 	int x = va_arg(arg, int);
 	int num, dig;
-	int last = n % 10, i = 1, exe = 1;
+	int last = x % 10, i = 1, exe = 1;
 
 	x = x / 10;
 	num = x;
