@@ -74,5 +74,7 @@ void print_String(va_list args);
 int int_print(va_list arg);
 int deci_print(va_list arg);
 
+/* bin_print.c module */
+int bin_print(va_list val);
 
 #endif
