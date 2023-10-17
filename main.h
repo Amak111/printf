@@ -69,4 +69,10 @@ int _printf(const char *format, ...);
 int _strlen(char *s);
 void print_char(va_list args);
 void print_String(va_list args);
+
+/* int_print.c module */
+int int_print(va_list arg);
+int deci_print(va_list arg);
+
+
 #endif
