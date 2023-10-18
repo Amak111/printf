@@ -14,12 +14,18 @@ int _printf(const char * const format, ...)
 
 	specifier_t print_op[] = {
 		{ "c", print_char },
-		{ "s", print_String },
-		{ "d", print_decimal },
-		{ "i", print_integer }
+		{ "s", print_string },
+		{ "%", print_percent }
 	};
-	unsigned int i = 0;
-	unsigned int j = 0;
+		/*{ "d", deci_print},*/
+		/*{ "i", int_print},*/
+		/*{ "b", bin_print},*/
+		/*{ "u", unsigned_print},*/
+		/*{ "o", oc_print},*/
+		/*{ "x", hex_print},*/
+		/*{ "X", HEX_print}*/
+	/*};*/
+	int i = 0, j = 0, len = 0;
 
 	va_start(list, format);
 
@@ -28,11 +34,11 @@ int _printf(const char * const format, ...)
 		j = 0;
 		if (format[i] == '%')
 		{
-			while (j < 4)
+			while (j < 2)
 			{
-				if (format[i + 1] == *print_op[j].identifier)
+				if (format[i + 1] == *print_op[j].specifier)
 				{
-					print_op[j].f(list);
+					len += print_op[j].f(list);
 					i += 2;
 					break;
 				}
@@ -42,10 +48,11 @@ int _printf(const char * const format, ...)
 		else
 		{
 			_putchar(format[i]);
+			len++;
 			i++;
 		}
 	}
 
 	va_end(list);
-	return (i);
+	return (len);
 }

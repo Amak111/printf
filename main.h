@@ -43,8 +43,8 @@ typedef struct parameters
 	unsigned int width;
 	unsigned int Precision;
 
-	unsigned int h_modifier;   : 1;
-	unsigned int l_modifier;   : 1;
+	unsigned int h_modifier   : 1;
+	unsigned int l_modifier   : 1;
 } params_t;
 
 /**
@@ -56,7 +56,7 @@ typedef struct parameters
 typedef struct specifier
 {
 	char *specifier;
-	int (*f)(va_list, params_t *);
+	int (*f)();
 } specifier_t;
 
 /* _putchar.c module */
@@ -67,8 +67,9 @@ int _printf(const char *format, ...);
 
 /* print_string.c */
 int _strlen(char *s);
-void print_char(va_list args);
-void print_String(va_list args);
+int print_char(va_list args);
+int print_string(va_list args);
+int print_percent(void);
 
 /* int_print.c module */
 int int_print(va_list arg);
