@@ -13,16 +13,9 @@ int _printf(const char * const format, ...)
 	va_list list;
 
 	specifier_t print_op[] = {
-		{ "c", print_char },
-		{ "s", print_string },
-		{ "%", print_percent }
-	};
-		/*{ "d", deci_print},*/
-		/*{ "i", int_print},*/
-		/*{ "b", bin_print},*/
-		/*{ "u", unsigned_print},*/
-		/*{ "o", oc_print},*/
-		/*{ "x", hex_print},*/
+		{ "c", print_char }, { "s", print_string }, { "%", print_percent }};
+		/*{ "d", deci_print}, { "i", int_print}, { "b", bin_print},*/
+		/*{ "u", unsigned_print}, { "o", oc_print}, { "x", hex_print},*/
 		/*{ "X", HEX_print}*/
 	/*};*/
 	int i = 0, j = 0, len = 0;
